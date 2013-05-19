@@ -1,0 +1,43 @@
+/*ESTA ES UNA MODIFICACION */
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package medinsumos;
+
+import javax.swing.JFrame;
+
+
+import org.jvnet.substance.SubstanceLookAndFeel;
+
+/**
+ *
+ * @author ANDRES
+ */
+public class Medinsumos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here.
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                //decorar frame
+                JFrame.setDefaultLookAndFeelDecorated(true);
+                //poner skin
+                SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.FieldOfWheatSkin");
+               // SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.MagmaSkin");
+                //creacion del farme
+                InterfazGrafica interfaz = new InterfazGrafica(); //creacion de interfaz
+                //abir y cerrar aplicacion
+                interfaz.setVisible(true);
+                interfaz.setLocationRelativeTo(null);
+                interfaz.show();
+                interfaz.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                //
+            }
+        });
+
+    }
+}
